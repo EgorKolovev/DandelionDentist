@@ -6,6 +6,9 @@ plugins {
 android {
     namespace 'ru.timcock.dandeliondentist'
     compileSdk 32
+    viewBinding {
+        enabled = true
+    }
 
     defaultConfig {
         applicationId "ru.timcock.dandeliondentist"
