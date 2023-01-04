@@ -29,6 +29,7 @@
         android:textColor="@color/black"/>
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/register_fio_edittext"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="12dp"
@@ -51,6 +52,7 @@
         android:layout_marginTop="20dp"
         android:textColor="@color/black"/>
     <androidx.appcompat.widget.AppCompatEditText
+        android:maxLines="1"
         android:inputType="textEmailAddress"
         android:id="@+id/register_email_edit_text"
         android:layout_width="match_parent"
@@ -76,6 +78,7 @@
 
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:maxLines="1"
         android:id="@+id/register_password_edit_text"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -101,6 +104,7 @@
         android:textSize="14sp"
         android:clickable="true"/>
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registration_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="12dp"

@@ -11,22 +11,32 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 
-private lateinit var binding: ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener{
+
+    private lateinit var binding: ActivityLoginBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view: View = binding.root
         setContentView(view)
         binding.registrationFromLogin.setOnClickListener(this)
+        binding.loginButton.setOnClickListener(this)
 
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
+
             R.id.registration_from_login->{
                 val intent = Intent(this, RegisterActivity::class.java)
+                startActivity(intent)
+                overridePendingTransition(0,0)
+            }
+
+            R.id.login_button->{
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 overridePendingTransition(0,0)
             }
