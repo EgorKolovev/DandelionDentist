@@ -19,6 +19,7 @@
     <color name="edit_text_background">#FFF6F9FB</color>
     <color name="edit_text_tint">#E9EDFE</color>
     <color name="edit_text_hint">#939CBF</color>
+    <color name="searchview_text">#B6B6B6</color>
 
 
 

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.timcock.dandeliondentist.R
+import ru.timcock.dandeliondentist.databinding.FragmentSearchBinding
 
 
 private const val ARG_PARAM1 = "param1"
@@ -16,6 +17,8 @@ class SearchFragment : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
+
+    lateinit var binding: FragmentSearchBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +34,13 @@ class SearchFragment : Fragment() {
     ): View? {
 
         return inflater.inflate(R.layout.fragment_search, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding=FragmentSearchBinding.bind(view)
+
     }
 
     companion object {

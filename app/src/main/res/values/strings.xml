@@ -24,7 +24,12 @@
     <string name="appointments">Записи</string>
     <string name="prescriptions">Рецепты</string>
     <string name="profile">Профиль</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="welcome_speech_one">Найди врача мечты и\nдобросовестную клинику</string>
+    <string name="welcome_speech_two">В приложении есть много\nвысококачественных врачей и клиник</string>
+    <string name="continue_button_text">Продолжить!</string>
+    <string name="searchview_hint">Услуга, врач, клиника...</string>
+
+
 
 </resources>

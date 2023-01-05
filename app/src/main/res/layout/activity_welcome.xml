@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.WelcomeActivity">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:src="@drawable/welcome_girl_face"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mont_bold"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="@string/welcome_speech_one"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/mont_regular"
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="@string/welcome_speech_two"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continue_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttons"
+        android:textColor="@color/white"
+        android:text="@string/continue_button_text"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:fontFamily="@font/mont_bold"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <ImageView
+        android:layout_width="97dp"
+        android:layout_height="11dp"
+        android:src="@drawable/dandelion"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        />
+
+
+</LinearLayout>
