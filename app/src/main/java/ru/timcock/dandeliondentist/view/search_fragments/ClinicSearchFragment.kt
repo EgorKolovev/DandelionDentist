@@ -1,4 +1,4 @@
-package ru.timcock.dandeliondentist.view
+package ru.timcock.dandeliondentist.view.search_fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,19 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.timcock.dandeliondentist.R
-import ru.timcock.dandeliondentist.databinding.FragmentSearchBinding
 
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class SearchFragment : Fragment(),View.OnClickListener {
+class ClinicSearchFragment : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
-
-    lateinit var binding: FragmentSearchBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,38 +29,18 @@ class SearchFragment : Fragment(),View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        return inflater.inflate(R.layout.fragment_search, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding=FragmentSearchBinding.bind(view)
-
-        binding.search.setOnClickListener(this)
-
-
+        return inflater.inflate(R.layout.fragment_clinic_search, container, false)
     }
 
     companion object {
 
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            SearchFragment().apply {
+            ClinicSearchFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
             }
-    }
-
-    fun Fragment.replaceChildFragment(fragment: Fragment, frameId: Int) {
-        val transaction = childFragmentManager.beginTransaction()
-        transaction.replace(frameId, fragment).commit()
-    }
-
-    override fun onClick(p0: View?) {
-
     }
 }
