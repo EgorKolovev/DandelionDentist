@@ -19,6 +19,7 @@ class WelcomeActivity : AppCompatActivity(), View.OnClickListener {
         binding.continueButton.setOnClickListener(this)
     }
 
+
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.continue_button->{

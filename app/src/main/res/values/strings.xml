@@ -29,8 +29,12 @@
     <string name="welcome_speech_two">В приложении есть много\nвысококачественных врачей и клиник</string>
     <string name="continue_button_text">Продолжить!</string>
     <string name="searchview_hint">Услуга, врач, клиника...</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="services">Услуги</string>
+    <string name="medics">Врачи</string>
+    <string name="clinics">Клиники</string>
 
+    <string name="hello_blank_fragment">iuergiueggiuegriubegh</string>
+
+    <string name="MC_template"><u>Подробнее о МЦ</u></string>
 </resources>

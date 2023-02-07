@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.timcock.dandeliondentist.R
+import ru.timcock.dandeliondentist.databinding.FragmentDoctorsSearchBinding
+import ru.timcock.dandeliondentist.databinding.FragmentServicesSearchBinding
+import ru.timcock.dandeliondentist.view.SearchFragment
 
 
 private const val ARG_PARAM1 = "param1"
@@ -17,12 +20,30 @@ class DoctorsSearchFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var binding: FragmentDoctorsSearchBinding
+    lateinit var adapter: SearchAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentDoctorsSearchBinding.bind(view)
+
+        val data = listOf(
+            "Дима","Софа",
+            "Захар","Буба"
+
+        )
+        adapter = SearchAdapter(requireContext(), data)
+        binding.doctorsSearchListview.adapter = adapter
+
+
     }
 
     override fun onCreateView(

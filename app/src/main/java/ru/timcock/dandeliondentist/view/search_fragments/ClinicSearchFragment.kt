@@ -1,11 +1,16 @@
 package ru.timcock.dandeliondentist.view.search_fragments
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import ru.timcock.dandeliondentist.R
+import ru.timcock.dandeliondentist.databinding.FragmentClinicSearchBinding
+import ru.timcock.dandeliondentist.databinding.FragmentDoctorsSearchBinding
 
 
 private const val ARG_PARAM1 = "param1"
@@ -17,6 +22,9 @@ class ClinicSearchFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var binding: FragmentClinicSearchBinding
+    lateinit var adapter: SearchAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -25,12 +33,28 @@ class ClinicSearchFragment : Fragment() {
         }
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentClinicSearchBinding.bind(view)
+        val data = listOf(
+            "Кооператив Крысиные хвостики","Вагинальная запеканка",
+            "Пустых оградок парадонтоз","Клиника Доктора Залупаева"
+
+        )
+
+        adapter = SearchAdapter(requireContext(), data)
+        binding.clinicSearchListview.adapter = adapter
+
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_clinic_search, container, false)
     }
+
 
     companion object {
 
