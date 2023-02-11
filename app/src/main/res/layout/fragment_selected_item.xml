@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SelectedItemFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/sort_tile_imageButton"
+                android:layout_width="157dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/sort_tile"
+                android:background="@null"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/filter_tile_imageButton"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/filter_title"
+                android:background="@null"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/location_tile_imageButton"
+                android:layout_width="93dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/location_tile"
+                android:background="@null"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+        
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    
+
+</FrameLayout>

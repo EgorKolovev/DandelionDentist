@@ -16,11 +16,45 @@
         app:shapeAppearance="@style/CornerCut" />
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/five_star_rating"
+        android:elevation="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView2" />
+
+    <TextView
+        android:id="@+id/review_amount_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/mont_semibold"
+        android:text="@string/review_amount"
+        android:textColor="@color/review_grey"
+        android:textSize="11sp"
+        android:layout_marginLeft="120dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-5dp"
+        android:src="@drawable/smiling_doctor_template"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView2"
         android:layout_width="193dp"
         android:layout_height="34.13dp"
         android:layout_marginStart="12dp"
         android:layout_marginBottom="-5dp"
+        android:elevation="1dp"
         android:src="@drawable/temlate_rating_background"
         app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
         app:layout_constraintStart_toStartOf="@+id/appCompatImageView" />

@@ -37,4 +37,7 @@
     <string name="hello_blank_fragment">iuergiueggiuegriubegh</string>
 
     <string name="MC_template"><u>Подробнее о МЦ</u></string>
+
+    <string name="review_amount"><u>12 отзывов</u></string>
+
 </resources>
