@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.content.res.AppCompatResources
 import ru.timcock.dandeliondentist.R
 import ru.timcock.dandeliondentist.databinding.FragmentDoctorsSearchBinding
 import ru.timcock.dandeliondentist.databinding.FragmentSelectedItemBinding
@@ -18,6 +19,7 @@ class SelectedItemFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var binding: FragmentSelectedItemBinding
+    private lateinit var doctorAdapter: DoctorListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +40,15 @@ class SelectedItemFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding=FragmentSelectedItemBinding.bind(view)
+        doctorAdapter = DoctorListAdapter()
+        var mallDoctors = arrayListOf<DoctorListItem>()
+        val f = 5.0
+        mallDoctors.add(DoctorListItem("Magomedova Anna Abchihba","Dentist","MC Noize",
+            "",resources.getDrawable(R.drawable.smiling_doctor_template), "12 reviews",
+            "Pushkina street", "22.03.2006",f))
+        binding.doctorRecyclerView.adapter = doctorAdapter
+        doctorAdapter.setmAllDoctorListItems(mallDoctors)
+
 
     }
 
