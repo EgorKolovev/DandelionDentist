@@ -1,5 +1,6 @@
 package ru.timcock.dandeliondentist.view.search_fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import ru.timcock.dandeliondentist.R
 import ru.timcock.dandeliondentist.databinding.FragmentDoctorsSearchBinding
 import ru.timcock.dandeliondentist.databinding.FragmentServicesSearchBinding
 import ru.timcock.dandeliondentist.view.SearchFragment
+import ru.timcock.dandeliondentist.view.SelectedItemActivity
 
 
 private const val ARG_PARAM1 = "param1"
@@ -34,14 +36,14 @@ class DoctorsSearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentDoctorsSearchBinding.bind(view)
-
-        val data = listOf(
-            "Дима","Софа",
-            "Захар","Буба"
-
-        )
+        val data = listOf("Дима","Софа", "Захар","Буба")
         adapter = SearchAdapter(requireContext(), data)
         binding.doctorsSearchListview.adapter = adapter
+        binding.doctorsSearchListview.setOnItemClickListener { parent, view, position, id ->
+            val element = adapter.getItem(position)
+            val intent = Intent(context, SelectedItemActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }

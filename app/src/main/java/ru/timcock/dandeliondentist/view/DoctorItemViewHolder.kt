@@ -24,10 +24,10 @@ class DoctorItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val doctor_location = item.doctor_location
         val doctor_rating = item.doctor_rating
         val doctor_dates = item.suggested_dates
-
-        if(doctor_rating in 4.5..5.0){
-            doctorRatingImageView.setImageResource(R.drawable.five_star_rating)
-        }
+        doctorRatingImageView.setImageResource(R.drawable.five_star_rating)
+//        if(doctor_rating in 4.5..5.0){
+//            doctorRatingImageView.setImageResource(R.drawable.five_star_rating)
+//        }
 //        }else if (doctor_rating in 4.0..4.4){
 //            doctorRatingImageView.setImageResource(R.drawable.five_star_rating)
 //        }else if (doctor_rating in 3.5..4.0){

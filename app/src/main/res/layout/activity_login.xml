@@ -98,7 +98,7 @@
         android:textSize="14sp"
         android:clickable="true"/>
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/login_button"
+        android:id="@+id/use_sort_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="12dp"

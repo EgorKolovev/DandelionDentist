@@ -5,16 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.SelectedItemActivity">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/tool_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="63dp"
             android:background="@color/white"
-
             app:navigationIcon="@drawable/actionbar_back_arrow_icon"
             android:minHeight="?attr/actionBarSize"
             app:layout_constraintTop_toTopOf="parent"
@@ -24,7 +20,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/frame_layout_home"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:id="@+id/item_selected_fragment"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package ru.timcock.dandeliondentist.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +15,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class SelectedItemFragment : Fragment() {
+class SelectedItemFragment : Fragment(), View.OnClickListener {
 
     private var param1: String? = null
     private var param2: String? = null
@@ -48,8 +49,9 @@ class SelectedItemFragment : Fragment() {
             "Pushkina street", "22.03.2006",f))
         binding.doctorRecyclerView.adapter = doctorAdapter
         doctorAdapter.setmAllDoctorListItems(mallDoctors)
-
-
+        binding.sortTileImageButton.setOnClickListener(this)
+        binding.filterTileImageButton.setOnClickListener(this)
+        binding.locationTileImageButton.setOnClickListener(this)
     }
 
     companion object {
@@ -61,5 +63,15 @@ class SelectedItemFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.sort_tile_imageButton->{
+                SortDialogFragment().show(childFragmentManager, "MyCustomFragment")
+
+            }
+
+        }
     }
 }

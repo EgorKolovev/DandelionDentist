@@ -1,6 +1,5 @@
 package ru.timcock.dandeliondentist.view
 
-import android.R.attr
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -22,7 +21,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener{
         val view: View = binding.root
         setContentView(view)
         binding.registrationFromLogin.setOnClickListener(this)
-        binding.loginButton.setOnClickListener(this)
+        binding.useSortButton.setOnClickListener(this)
 
     }
 
@@ -35,7 +34,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener{
                 overridePendingTransition(0,0)
             }
 
-            R.id.login_button->{
+            R.id.use_sort_button->{
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 overridePendingTransition(0,0)

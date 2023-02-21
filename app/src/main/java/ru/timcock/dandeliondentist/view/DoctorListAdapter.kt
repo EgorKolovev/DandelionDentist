@@ -1,5 +1,6 @@
 package ru.timcock.dandeliondentist.view
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +14,7 @@ class DoctorListAdapter(): RecyclerView.Adapter<DoctorItemViewHolder>() {
         val context = parent.context
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.user_card_template, parent, false)
+        Log.d("RECYCLER_TAG", "onCreateViewHolder: ")
         return DoctorItemViewHolder(view)
     }
 
