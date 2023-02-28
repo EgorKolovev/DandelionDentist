@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="@+id/rating_checkbox"
         />
     <androidx.appcompat.widget.AppCompatCheckBox
-        android:id="@+id/proximity_to_me_textbox"
+        android:id="@+id/proximity_to_me_checkbox"
         android:layout_width="wrap_content"
         android:theme="@style/checkBoxStyle"
         android:layout_height="wrap_content"
@@ -55,45 +55,50 @@
         />
 
     <TextView
+        android:id="@+id/nearest_appointment_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:clickable="true"
         android:fontFamily="@font/mont_semibold"
-        android:text="По ближайшей записи"
+        android:text="По ближайшей записи                                       "
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/nearest_appointment_date_checkbox"
         app:layout_constraintTop_toTopOf="@+id/nearest_appointment_date_checkbox" />
     <TextView
+        android:id="@+id/rating_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/mont_semibold"
-        android:text="По рейтингу"
+        android:text="По рейтингу                                                    "
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/rating_checkbox"
         app:layout_constraintTop_toTopOf="@+id/rating_checkbox" />
     <TextView
+        android:id="@+id/price_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/mont_semibold"
-        android:text="По цене"
+        android:text="По цене                                                             "
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/price_checkbox"
         app:layout_constraintTop_toTopOf="@+id/price_checkbox" />
     <TextView
+        android:id="@+id/nearest_to_me_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/mont_semibold"
-        android:text="По близости ко мне"
+        android:text="По близости ко мне                                        "
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/proximity_to_me_textbox"
-        app:layout_constraintTop_toTopOf="@+id/proximity_to_me_textbox" />
+        app:layout_constraintStart_toEndOf="@+id/proximity_to_me_checkbox"
+        app:layout_constraintTop_toTopOf="@+id/proximity_to_me_checkbox" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -112,8 +117,8 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/proximity_to_me_textbox"
-        app:layout_constraintTop_toBottomOf="@+id/proximity_to_me_textbox" />
+        app:layout_constraintStart_toStartOf="@id/proximity_to_me_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/proximity_to_me_checkbox" />
 
 
 
