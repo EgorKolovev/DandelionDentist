@@ -1,17 +1,14 @@
 package ru.timcock.dandeliondentist.view.search_fragments
 
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import com.google.android.material.tabs.TabLayout
 import ru.timcock.dandeliondentist.R
 import ru.timcock.dandeliondentist.databinding.FragmentTabLayoutBinding
-import ru.timcock.dandeliondentist.view.SearchFragment
+import ru.timcock.dandeliondentist.view.fragments.SearchFragment
 
 
 private const val ARG_PARAM1 = "param1"

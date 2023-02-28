@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.SelectedItemFragment"
+    tools:context=".view.fragments.SelectedItemFragment"
     android:layout_marginTop="63dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat

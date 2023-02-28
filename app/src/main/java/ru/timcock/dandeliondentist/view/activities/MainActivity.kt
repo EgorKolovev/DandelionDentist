@@ -1,12 +1,15 @@
-package ru.timcock.dandeliondentist.view
+package ru.timcock.dandeliondentist.view.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import ru.timcock.dandeliondentist.R
-import ru.timcock.dandeliondentist.databinding.ActivityLoginBinding
 import ru.timcock.dandeliondentist.databinding.ActivityMainBinding
+import ru.timcock.dandeliondentist.view.fragments.PrescriptionsFragment
+import ru.timcock.dandeliondentist.view.fragments.ProfileFragment
+import ru.timcock.dandeliondentist.view.fragments.SearchFragment
+import ru.timcock.dandeliondentist.view.fragments.AppointmentsFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

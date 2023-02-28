@@ -1,11 +1,10 @@
-package ru.timcock.dandeliondentist.view
+package ru.timcock.dandeliondentist.view.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import ru.timcock.dandeliondentist.R
-import ru.timcock.dandeliondentist.databinding.ActivityLoginBinding
 import ru.timcock.dandeliondentist.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity(), View.OnClickListener {
@@ -23,7 +22,7 @@ class WelcomeActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.continue_button->{
-                intent = Intent(this,LoginActivity::class.java)
+                intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 overridePendingTransition(0,0)
             }

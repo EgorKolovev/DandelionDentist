@@ -1,4 +1,4 @@
-package ru.timcock.dandeliondentist.view
+package ru.timcock.dandeliondentist.view.items
 
 import android.util.Log
 import android.view.LayoutInflater

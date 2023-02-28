@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ru.timcock.dandeliondentist.R
 import ru.timcock.dandeliondentist.databinding.FragmentClinicSearchBinding
-import ru.timcock.dandeliondentist.view.SelectedItemActivity
+import ru.timcock.dandeliondentist.view.activities.SelectedItemActivity
 
 
 private const val ARG_PARAM1 = "param1"

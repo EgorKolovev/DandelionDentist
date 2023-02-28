@@ -1,31 +1,20 @@
-package ru.timcock.dandeliondentist.view
+package ru.timcock.dandeliondentist.view.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnFocusChangeListener
 import android.view.ViewGroup
 import android.widget.SearchView
-import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import ru.timcock.dandeliondentist.R
 import ru.timcock.dandeliondentist.databinding.FragmentSearchBinding
 import ru.timcock.dandeliondentist.view.search_fragments.*
 
+class SearchFragment : Fragment(), View.OnClickListener {
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-
-class SearchFragment : Fragment(),View.OnClickListener {
-
-    private var param1: String? = null
-    private var param2: String? = null
 
     lateinit var binding: FragmentSearchBinding
 
@@ -34,10 +23,7 @@ class SearchFragment : Fragment(),View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
@@ -51,7 +37,7 @@ class SearchFragment : Fragment(),View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding=FragmentSearchBinding.bind(view)
+        binding= FragmentSearchBinding.bind(view)
 
         val tabLayoutFragment = TabLayoutFragment()
         val suggestionsSearchFragment = SuggestionsSearchFragment()
@@ -62,9 +48,12 @@ class SearchFragment : Fragment(),View.OnClickListener {
         }
         }
 
-        binding.search.setOnFocusChangeListener(OnFocusChangeListener { view, hasFocus ->
+        binding.search.setOnFocusChangeListener(View.OnFocusChangeListener { view, hasFocus ->
             if (!hasFocus) {
-                replaceChildFragment(suggestionsSearchFragment, R.id.fragment_search_child_fragment,"SUGGESTIONS_FRAGMENT_TAG")
+                replaceChildFragment(
+                    suggestionsSearchFragment,
+                    R.id.fragment_search_child_fragment, "SUGGESTIONS_FRAGMENT_TAG"
+                )
             }
         })
         binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
@@ -81,7 +70,7 @@ class SearchFragment : Fragment(),View.OnClickListener {
                     for (fragment in fragments!!) {
                         Log.d("QUERY_TAG", fragment.javaClass.simpleName)
                     }
-                    Log.d("QUERY_TAG", "fragment is "+fragment.toString())
+                    Log.d("QUERY_TAG", "fragment is " + fragment.toString())
                     if (adapter != null) {
                         Log.d("QUERY_TAG", "NOTNULL")
                         adapter.filter(newText?.toString() ?: "")
@@ -115,7 +104,8 @@ class SearchFragment : Fragment(),View.OnClickListener {
                     Log.d("HANDLE_TAG", "handleOnBackPressed: ")
                     if (searchViewIsOpened){
                         val suggestionsSearchFragment = SuggestionsSearchFragment()
-                        replaceChildFragment(suggestionsSearchFragment, R.id.fragment_search_child_fragment,"SUGGESTIONS_FRAGMENT_TAG")
+                        replaceChildFragment(suggestionsSearchFragment,
+                            R.id.fragment_search_child_fragment,"SUGGESTIONS_FRAGMENT_TAG")
                         tab_flag=0
                     }
                     childFragmentManager.popBackStackImmediate()
@@ -139,14 +129,7 @@ class SearchFragment : Fragment(),View.OnClickListener {
         var tab_flag=1
 
 
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SearchFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+
     }
 
 

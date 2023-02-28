@@ -1,7 +1,6 @@
-package ru.timcock.dandeliondentist.view
+package ru.timcock.dandeliondentist.view.items
 
 import android.view.View
-import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView

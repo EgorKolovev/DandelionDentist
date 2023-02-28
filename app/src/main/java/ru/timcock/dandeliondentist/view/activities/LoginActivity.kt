@@ -1,4 +1,4 @@
-package ru.timcock.dandeliondentist.view
+package ru.timcock.dandeliondentist.view.activities
 
 import android.content.Intent
 import android.os.Bundle
