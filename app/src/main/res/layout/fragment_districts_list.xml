@@ -4,13 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.fragments.MetroListFragment">
+    tools:context=".view.fragments.DistrictsListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:id="@+id/metro_recycler_view"
+        android:id="@+id/district_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
 
 </FrameLayout>

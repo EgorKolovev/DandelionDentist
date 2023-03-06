@@ -1,5 +1,6 @@
 package ru.timcock.dandeliondentist.view.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ru.timcock.dandeliondentist.R
 import ru.timcock.dandeliondentist.databinding.FragmentSelectedItemBinding
+import ru.timcock.dandeliondentist.view.activities.WhereSortActivity
 import ru.timcock.dandeliondentist.view.items.DoctorListAdapter
 import ru.timcock.dandeliondentist.view.items.DoctorListItem
 
@@ -57,7 +59,14 @@ class SelectedItemFragment : Fragment(), View.OnClickListener {
                 SortDialogFragment().show(childFragmentManager, "MyCustomFragment")
 
             }
+            R.id.location_tile_imageButton->{
+                val intent = Intent(context, WhereSortActivity::class.java)
+                startActivity(intent)
+            }
 
         }
     }
+
+
+
 }
